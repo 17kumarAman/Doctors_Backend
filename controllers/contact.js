@@ -3,8 +3,8 @@ import { removeUndefined } from "../utils/utils.js";
 
 export const createContact = async (req, res) => {
   try {
-    const { name, email, subject, message } = req.body;
-    const data = removeUndefined({ name, email, subject, message });
+    const { name, email, phone, message } = req.body;
+    const data = removeUndefined({ name, email, phone, message });
 
     const fields = Object.keys(data);
     const placeholders = fields.map(() => "?").join(", ");
